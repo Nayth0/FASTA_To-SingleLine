@@ -23,7 +23,7 @@ def fasta_to_single_line(input_file, output_file):
     except Exception as e:
         print(f"An error occurred: {str(e)}")
 
-# Replace these filenames with your input and output file names as desired
+# Replace these filenames with your input and output file names as desired (Must be whole file name) 
 input_file = 'input-file-name-here'
 output_file = 'output-file-name-here'
 
