@@ -1,8 +1,8 @@
-# Projects in Python
+
 
 Converts FASTA file into single-line output
 
-Requires: Python IDLE Shell 
+# Requires: Python IDLE Shell 
 --------------------------------------------------
 
 1. Open IDLE shell
