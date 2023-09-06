@@ -1,4 +1,7 @@
-# LaBella_Lab_Project
-WIP 
+# Projects in Python
 
-Fasta-to-Single-Line
+Converts FASTA file into single line output
+
+Requires: Python 
+
+
