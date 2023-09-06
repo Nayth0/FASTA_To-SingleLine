@@ -1,4 +1,4 @@
-
+#Fasta to Single Line -> line 26 for instructions 
 
 def fasta_to_single_line(input_file, output_file):
     try:
