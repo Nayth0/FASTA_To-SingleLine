@@ -16,4 +16,8 @@ Instructions for use:
 
 -Example of use in CMD-
 
-python FASTACMD.py -i input.fasta -o output.fasta
+python FASTACMD.py -i inputname.fasta -o outputname.fasta
+
+-Example of multiple Input files- 
+
+python FASTACMD.py -i input1.fasta input2.fasta -o outputname.fasta
