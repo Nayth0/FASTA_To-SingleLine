@@ -1,10 +1,11 @@
-**FASTACMD.py **
 
-Converts FASTA file into single-line output inside of a command line
 
- Requires: Python
+ FASTACMD.py
 --------------------------------------------------
+Converts FASTA file into single-line output inside of a command line
+*Requires Python* 
 
+Instructions for use: 
 Open a terminal or command prompt.
 
 Navigate to the directory where the fasta_converter.py script is located. 
