@@ -1,6 +1,12 @@
 import argparse
 import os
 
+def ensure_extension(filename, extension):
+    # Ensure that the filename ends with the specified extension
+    if not filename.endswith(extension):
+        filename += extension
+    return filename
+
 def combine_filenames(input_files):
     # Combine the base names of input files
     base_names = [os.path.splitext(os.path.basename(file))[0] for file in input_files]
@@ -8,6 +14,13 @@ def combine_filenames(input_files):
 
 def fasta_to_single_line(input_files, output_file=None):
     try:
+        if not output_file:
+            # If output_file is not provided, generate a default name based on input file names
+            output_file = combine_filenames(input_files)
+        else:
+            # Ensure that the output file has the .fasta extension
+            output_file = ensure_extension(output_file, '.fasta')
+
         with open(output_file, 'w') as output_fasta:
             for input_file in input_files:
                 with open(input_file, 'r') as input_fasta:
@@ -43,6 +56,9 @@ def main():
     if not output_file:
         # Use the default output file name based on input file names
         output_file = combine_filenames(input_files)
+    else:
+        # Ensure that the output file has the .fasta extension
+        output_file = ensure_extension(output_file, '.fasta')
 
     fasta_to_single_line(input_files, output_file)
 
