@@ -2,11 +2,16 @@
 
 Converts FASTA file into single-line output
 
-# Requires: Python IDLE Shell 
+# Requires: Python
 --------------------------------------------------
 
-1. Download FASTA_Conversion.py
-2. Create a folder for the desired FASTA sample
-3. Put FASTA_Conversion.py and FASTA file into the folder
-4. Open FASTA_Conversion.py in IDLE shell (Mac run in regular Python Terminal)
-5. Follow the Instructions on Line 26
+Open a terminal or command prompt.
+
+Navigate to the directory where the fasta_converter.py script is located. 
+
+Run the script with the -i flag to specify the input FASTA file. You can also use the optional -o flag to specify the output file, but if you don't, the script will generate an output file with a default name.
+
+
+Example of use: 
+(In cmd prompt)
+python FASTACMD.py -i input.fasta -o output.fasta
