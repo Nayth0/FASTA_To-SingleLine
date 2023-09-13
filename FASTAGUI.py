@@ -1,4 +1,4 @@
-#This script can be ran to open a GUI for easier access to directories and file. 
+#This script can be ran to open a GUI for easier access to directories and file. (intended for 1 file at a time) 
 import tkinter as tk
 from tkinter import filedialog
 
