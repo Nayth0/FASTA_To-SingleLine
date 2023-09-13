@@ -1,4 +1,5 @@
-#Fasta to Single Line -> line 26 for instructions 
+import tkinter as tk
+from tkinter import filedialog
 
 def fasta_to_single_line(input_file, output_file):
     try:
@@ -18,14 +19,29 @@ def fasta_to_single_line(input_file, output_file):
             # Write the last sequence (if any)
             if sequence:
                 output_fasta.write(sequence + '\n')
-        
+
         print(f"Conversion complete. Output written to '{output_file}'")
     except Exception as e:
         print(f"An error occurred: {str(e)}")
 
-# Replace these filenames with your input and output file names as desired (Must be whole file name) 
-input_file = 'input-file-name-here'
-output_file = 'output-file-name-here'
+def select_fasta_file():
+    root = tk.Tk()
+    root.withdraw()  
 
-fasta_to_single_line(input_file, output_file)
+    input_file_path = filedialog.askopenfilename(
+        title="Select FASTA File",
+        filetypes=[("FASTA Files", "*.fasta"), ("All Files", "*.*")]
+    )
 
+    if input_file_path:
+        output_file_path = filedialog.asksaveasfilename(
+            defaultextension=".fasta",
+            filetypes=[("FASTA Files", "*.fasta"), ("All Files", "*.*")],
+            title="Save Converted FASTA File"
+        )
+
+        if output_file_path:
+            fasta_to_single_line(input_file_path, output_file_path)
+
+if __name__ == "__main__":
+    select_fasta_file()
