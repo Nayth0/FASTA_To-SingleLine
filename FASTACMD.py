@@ -1,42 +1,40 @@
 import argparse
 
-def fasta_to_single_line(input_file, output_file=None):
+def fasta_to_single_line(input_files, output_file):
     try:
-        if not output_file:
-            # If output_file is not provided, generate a default name based on the input file
-            output_file = f"{input_file}.single_line.fasta"
+        with open(output_file, 'w') as output_fasta:
+            for input_file in input_files:
+                with open(input_file, 'r') as input_fasta:
+                    sequence = ""
+                    for line in input_fasta:
+                        line = line.strip()
+                        if line.startswith('>'):
+                            # If it's a header line, write the previous sequence (if any)
+                            if sequence:
+                                output_fasta.write(sequence + '\n')
+                            output_fasta.write(line + '\n')  # Write the header line
+                            sequence = ""  # Reset the sequence
+                        else:
+                            sequence += line  # Concatenate sequence lines
 
-        with open(input_file, 'r') as input_fasta, open(output_file, 'w') as output_fasta:
-            sequence = ""
-            for line in input_fasta:
-                line = line.strip()
-                if line.startswith('>'):
-                    # If it's a header line, write the previous sequence (if any)
+                    # Write the last sequence (if any)
                     if sequence:
                         output_fasta.write(sequence + '\n')
-                    output_fasta.write(line + '\n')  # Write the header line
-                    sequence = ""  # Reset the sequence
-                else:
-                    sequence += line  # Concatenate sequence lines
-
-            # Write the last sequence (if any)
-            if sequence:
-                output_fasta.write(sequence + '\n')
         
         print(f"Conversion complete. Output written to '{output_file}'")
     except Exception as e:
         print(f"An error occurred: {str(e)}")
 
 def main():
-    parser = argparse.ArgumentParser(description='Convert a FASTA file to single-line format.')
-    parser.add_argument('-i', '--input', required=True, help='Input FASTA file')
-    parser.add_argument('-o', '--output', help='Output FASTA file (default: input.single_line.fasta)')
+    parser = argparse.ArgumentParser(description='Convert FASTA files to single-line format and combine them into a single output file.')
+    parser.add_argument('-i', '--input', nargs='+', required=True, help='Input FASTA file(s)')
+    parser.add_argument('-o', '--output', required=True, help='Output FASTA file')
 
     args = parser.parse_args()
-    input_file = args.input
+    input_files = args.input
     output_file = args.output
 
-    fasta_to_single_line(input_file, output_file)
+    fasta_to_single_line(input_files, output_file)
 
 if __name__ == '__main__':
     main()
