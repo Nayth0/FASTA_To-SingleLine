@@ -21,7 +21,9 @@ No specific installation steps are needed since the script uses standard Python 
 ### Executing program
 
 *Open a terminal or command prompt.
+
 *Navigate to the directory containing the script.
+
 *Enter the command as follows: 
 
 (For Single-File Use)
