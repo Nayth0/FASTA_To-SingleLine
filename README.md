@@ -40,6 +40,7 @@ python FASTACMD.py -i <input_file1> <input_file2>  -o <output_file>
 ```
 python FASTAGUI.py
 ```
+and select file for input and output
 
 ## Author
 
