@@ -28,11 +28,11 @@ No specific installation steps are needed since the script uses standard Python 
 
 (For Single-File Use)
 ```
-python script.py -i <input_file1> -o <output_file>
+python FASTACMD.py -i <input_file1> -o <output_file>
 ```
 (For Multi-File Use) 
 ```
-python script.py -i <input_file1> <input_file2>  -o <output_file>
+python FASTACMD.py -i <input_file1> <input_file2>  -o <output_file>
 ```
 *note* - If -o flag is not used, a generic name will be used to label the output file 
 
