@@ -44,9 +44,10 @@ and select file for input and output
 
 ## Author
 
-Contributors names and contact info
+
 
 Nathan Do
+
  -nayth0s5@gmail.com
 
 This project is licensed under the MIT License - see the LICENSE.md file for details
