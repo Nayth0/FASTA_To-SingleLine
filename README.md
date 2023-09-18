@@ -1,23 +1,45 @@
-
-   FASTACMD.py
---------------------------------------------------
-Converts FASTA file into single-line output inside of a command line
-
--*Requires Python*- 
-
-Instructions for use: 
-
-1. Open a terminal or command prompt.
-
-2. Navigate to the directory where the fasta_converter.py script is located. 
-
-3. Run the script with the -i flag to specify the input FASTA file. You can also use the optional -o flag to specify the output file, but if you don't, the script will generate an output file with a default name.
+# FASTA to Single-Line
+A Python script that offers a straightforward and efficient solution to convert FASTA-formatted files, commonly utilized in bioinformatics, into a single-line format. 
+This conversion streamlines data processing and analysis, enabling easier handling and manipulation of biological sequence data.
 
 
--Example of use in CMD-
 
-python FASTACMD.py -i inputname.fasta -o outputname.fasta
+## Getting Started
 
--Example of multiple Input files- 
+### Dependencies
 
-python FASTACMD.py -i input1.fasta input2.fasta -o outputname.fasta
+The script relies on the following Python modules:
+
+'argparse': For command-line argument parsing.
+
+'os': For file-related operations.
+
+### Installing
+
+No specific installation steps are needed since the script uses standard Python libraries. Ensure you have Python installed on your system (preferably Python 3.0 or greater).
+
+### Executing program
+
+*Open a terminal or command prompt.
+*Navigate to the directory containing the script.
+*Enter the command as follows: 
+
+(For Single-File Use)
+```
+python script.py -i <input_file1> -o <output_file>
+```
+(For Multi-File Use) 
+```
+python script.py -i <input_file1> <input_file2>  -o <output_file>
+```
+*note* - If -o flag is not used, a generic name will be used to label the output file 
+
+
+## Author
+
+Contributors names and contact info
+
+Nathan Do
+ -nayth0s5@gmail.com
+
+This project is licensed under the MIT License - see the LICENSE.md file for details
