@@ -36,6 +36,10 @@ python FASTACMD.py -i <input_file1> <input_file2>  -o <output_file>
 ```
 *note* - If -o flag is not used, a generic name will be used to label the output file 
 
+(For single-file use (with GUI))
+```
+python FASTAGUI.py
+```
 
 ## Author
 
