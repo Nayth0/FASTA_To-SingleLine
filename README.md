@@ -1,5 +1,5 @@
 # FASTA to Single-Line
-A Python script that offers a straightforward and efficient solution to convert FASTA-formatted files, commonly utilized in bioinformatics, into a single-line format. 
+A lightweight and accessible Python script that offers a straightforward and efficient solution to convert FASTA-formatted files, commonly utilized in bioinformatics, into a single-line format. 
 This conversion streamlines data processing and analysis, enabling easier handling and manipulation of biological sequence data.
 
 
